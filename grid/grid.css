@@ -1,0 +1,148 @@
+
+/* Remove default browser spacing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 30px;
+}
+
+/* Restaurant header */
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    color: #d35400;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+}
+
+/* Menu heading */
+main h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* ==================================
+   CSS GRID CONTAINER
+   ================================== */
+
+.menu-container {
+
+    /* Turn the container into a Grid */
+    display: grid;
+
+    /*
+       Create 2 equal columns.
+
+       1fr means one fraction of the
+       available space.
+
+       Each column gets equal width.
+    */
+    grid-template-columns: 1fr 1fr;
+
+    /*
+       Create 2 rows.
+
+       Each row has a minimum height
+       of 300px and can grow if needed.
+    */
+    grid-template-rows: repeat(2, minmax(300px, auto));
+
+    /*
+       Add space between rows and columns.
+    */
+    gap: 25px;
+
+    /* Limit the menu width */
+    max-width: 1000px;
+
+    /* Center the menu on the page */
+    margin: 0 auto;
+}
+
+
+/* ==================================
+   INDIVIDUAL MENU ITEMS
+   ================================== */
+
+.menu-item {
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    /* Add a subtle shadow */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Food images */
+.menu-item img {
+    width: 100%;
+
+    height: 200px;
+
+    /* Prevent images from stretching */
+    object-fit: cover;
+}
+
+
+/* Food information */
+.food-info {
+    padding: 20px;
+}
+
+.food-info h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.food-info p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Food prices */
+.food-info span {
+    color: #d35400;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* ==================================
+   RESPONSIVE DESIGN
+   ================================== */
+
+/*
+   On smaller screens, change the
+   menu from 2 columns to 1 column.
+*/
+
+@media (max-width: 600px) {
+
+    .menu-container {
+        grid-template-columns: 1fr;
+
+        /* Rows are created automatically */
+        grid-template-rows: auto;
+    }
+
+}
