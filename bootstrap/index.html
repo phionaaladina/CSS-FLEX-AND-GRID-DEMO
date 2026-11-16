@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jamaal's Cookies | Freshly Baked With Love</title>
+
+    <!-- Bootstrap CSS: provides ready-made styling and responsive layouts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Our custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION BAR ================= -->
+    <!-- Bootstrap navbar with a responsive mobile menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+        <div class="container">
+
+            <!-- Business logo/name -->
+            <a class="navbar-brand" href="#">
+                Jamaal's <span>Cookies</span>
+            </a>
+
+            <!-- Mobile menu toggle button -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Our Cookies</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="#products" class="btn btn-cookie">
+                            Order Now
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <!-- Bootstrap grid divides this section into text and image columns -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Hero text -->
+                <div class="col-lg-6 hero-content">
+
+                    <p class="eyebrow">FRESHLY BAKED EVERY DAY</p>
+
+                    <h1>
+                        Cookies That Make Every Moment Sweeter.
+                    </h1>
+
+                    <p class="hero-description">
+                        Enjoy delicious, freshly baked cookies made with
+                        quality ingredients and a little extra love.
+                    </p>
+
+                    <!-- Call-to-action buttons -->
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="#products" class="btn btn-cookie btn-lg">
+                            Explore Our Cookies
+                        </a>
+
+                        <a href="#about" class="btn btn-outline-cookie btn-lg">
+                            Learn More
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Hero image -->
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <img
+                        src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1000"
+                        alt="Freshly baked cookies"
+                        class="img-fluid hero-image">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= COOKIE CAROUSEL ================= -->
+    <!-- Bootstrap carousel automatically changes slides -->
+    <section class="carousel-section">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <p class="eyebrow">A TASTE OF HAPPINESS</p>
+                <h2>Discover Our Favourites</h2>
+                <p>Find your next favourite treat.</p>
+            </div>
+
+            <!-- Carousel wrapper -->
+            <div id="cookieCarousel"
+                 class="carousel slide"
+                 data-bs-ride="carousel"
+                 data-bs-interval="4000"
+                 data-bs-pause="hover">
+
+                <!-- Carousel indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#cookieCarousel"
+                            data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+
+                    <button type="button" data-bs-target="#cookieCarousel"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+
+                    <button type="button" data-bs-target="#cookieCarousel"
+                            data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Carousel slides -->
+                <div class="carousel-inner">
+
+                    <!-- First slide -->
+                    <div class="carousel-item active">
+                        <div class="carousel-background slide-one">
+                            <div class="carousel-overlay"></div>
+
+                            <div class="carousel-caption">
+                                <p>OUR SIGNATURE COOKIE</p>
+                                <h3>Chocolate Chip Bliss</h3>
+                                <a href="#products" class="btn btn-cookie">
+                                    Explore Collection
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second slide -->
+                    <div class="carousel-item">
+                        <div class="carousel-background slide-two">
+                            <div class="carousel-overlay"></div>
+
+                            <div class="carousel-caption">
+                                <p>RICH AND DELICIOUS</p>
+                                <h3>Double Chocolate Delight</h3>
+                                <a href="#products" class="btn btn-cookie">
+                                    Explore Collection
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third slide -->
+                    <div class="carousel-item">
+                        <div class="carousel-background slide-three">
+                            <div class="carousel-overlay"></div>
+
+                            <div class="carousel-caption">
+                                <p>MADE WITH LOVE</p>
+                                <h3>Red Velvet Cookies</h3>
+                                <a href="#products" class="btn btn-cookie">
+                                    Explore Collection
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Previous slide button -->
+                <button class="carousel-control-prev" type="button"
+                        data-bs-target="#cookieCarousel"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"
+                          aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <!-- Next slide button -->
+                <button class="carousel-control-next" type="button"
+                        data-bs-target="#cookieCarousel"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon"
+                          aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- About image -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img
+                        src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=900"
+                        alt="Cookies being prepared"
+                        class="img-fluid about-image">
+                </div>
+
+                <!-- About text -->
+                <div class="col-lg-7 ps-lg-5">
+                    <p class="eyebrow">OUR STORY</p>
+
+                    <h2>Baked With Love. Shared With Joy.</h2>
+
+                    <p>
+                        At Jamaal's Cookies, we believe that the simplest
+                        moments can become special with a delicious treat.
+                    </p>
+
+                    <p>
+                        We make our cookies with carefully selected
+                        ingredients, attention to detail and a passion
+                        for great taste.
+                    </p>
+
+                    <a href="#contact" class="btn btn-cookie mt-3">
+                        Get In Touch
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= PRODUCTS SECTION ================= -->
+    <section class="products-section" id="products">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <p class="eyebrow">MADE FRESH FOR YOU</p>
+                <h2>Our Favourite Cookies</h2>
+                <p>Delicious treats for every occasion.</p>
+            </div>
+
+            <!-- Bootstrap grid: three columns on large screens -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <!-- Product 1 -->
+                <div class="col">
+                    <div class="card product-card h-100">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=700"
+                            class="card-img-top product-image"
+                            alt="Chocolate chip cookies">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Chip</h5>
+
+                            <p class="card-text">
+                                A classic favourite filled with rich
+                                chocolate chips.
+                            </p>
+
+                            <div class="d-flex justify-content-between
+                                        align-items-center mt-4">
+                                <span class="product-price">UGX 5,000</span>
+
+                                <a href="#contact" class="btn btn-cookie">
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col">
+                    <div class="card product-card h-100">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=700"
+                            class="card-img-top product-image"
+                            alt="Chocolate cookies">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Double Chocolate</h5>
+
+                            <p class="card-text">
+                                A rich chocolate cookie for chocolate lovers.
+                            </p>
+
+                            <div class="d-flex justify-content-between
+                                        align-items-center mt-4">
+                                <span class="product-price">UGX 6,000</span>
+
+                                <a href="#contact" class="btn btn-cookie">
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col">
+                    <div class="card product-card h-100">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=700"
+                            class="card-img-top product-image"
+                            alt="Freshly baked cookies">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Red Velvet</h5>
+
+                            <p class="card-text">
+                                Soft, delicious and made for special moments.
+                            </p>
+
+                            <div class="d-flex justify-content-between
+                                        align-items-center mt-4">
+                                <span class="product-price">UGX 6,000</span>
+
+                                <a href="#contact" class="btn btn-cookie">
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="features-section">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <p class="eyebrow">THE JAMAAL'S DIFFERENCE</p>
+                <h2>Why Choose Our Cookies?</h2>
+            </div>
+
+            <div class="row g-4 text-center">
+
+                <!-- Feature 1 -->
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <h5>Quality Ingredients</h5>
+                        <p>
+                            We carefully select ingredients for great taste
+                            and quality.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <h5>Freshly Baked</h5>
+                        <p>
+                            Our cookies are prepared with freshness
+                            and flavour in mind.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <h5>Made With Love</h5>
+                        <p>
+                            Every batch is made with care and attention
+                            to detail.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= CONTACT / CALL TO ACTION ================= -->
+    <section class="contact-section" id="contact">
+        <div class="container text-center">
+
+            <p class="eyebrow">A LITTLE SOMETHING SWEET</p>
+
+            <h2>Ready to Place Your Order?</h2>
+
+            <p>
+                Treat yourself or someone special to freshly baked cookies.
+            </p>
+
+            <a href="https://wa.me/256773874765"
+               class="btn btn-light btn-lg mt-3"
+               target="_blank"
+               rel="noopener">
+                Contact Us on WhatsApp
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start">
+                    <a class="footer-brand" href="#">
+                        Jamaal's Cookies
+                    </a>
+
+                    <p class="mb-0">
+                        Freshly baked with love.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <p class="mb-0">
+                        &copy; 2026 Jamaal's Cookies. All rights reserved.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JavaScript: enables carousel, navbar and other components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

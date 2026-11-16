@@ -1,0 +1,455 @@
+
+/* =========================================
+   1. BRAND COLOURS AND GLOBAL STYLES
+   ========================================= */
+
+/* CSS variables make it easy to reuse brand colours */
+:root {
+    --chocolate: #5c351c;
+    --dark-chocolate: #321b0f;
+    --caramel: #d9a441;
+    --cream: #fff8ed;
+    --light-cream: #fdf2df;
+    --text-color: #3b302a;
+    --white: #ffffff;
+}
+
+/* General page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.7;
+}
+
+/* Headings use a different font for a premium look */
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-chocolate);
+}
+
+section {
+    padding: 85px 0;
+}
+
+
+/* =========================================
+   2. NAVIGATION BAR
+   ========================================= */
+
+.custom-navbar {
+    background-color: var(--dark-chocolate);
+    padding: 18px 0;
+}
+
+/* Business name */
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.navbar-brand span {
+    color: var(--caramel);
+}
+
+/* Navigation links */
+.navbar-nav .nav-link {
+    color: var(--white);
+    margin-left: 18px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--caramel);
+}
+
+
+/* =========================================
+   3. BUTTONS
+   ========================================= */
+
+.btn-cookie {
+    background-color: var(--caramel);
+    color: var(--dark-chocolate);
+    border: 1px solid var(--caramel);
+    padding: 11px 23px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-cookie:hover {
+    background-color: var(--chocolate);
+    color: var(--white);
+    border-color: var(--chocolate);
+}
+
+.btn-outline-cookie {
+    color: var(--chocolate);
+    border: 1px solid var(--chocolate);
+    padding: 11px 23px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-cookie:hover {
+    background-color: var(--chocolate);
+    color: var(--white);
+}
+
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+
+.hero-section {
+    background-color: var(--cream);
+    padding: 100px 0;
+}
+
+.eyebrow {
+    color: var(--chocolate);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 480px;
+    font-size: 16px;
+    color: #6b625c;
+}
+
+.hero-image {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   5. SECTION HEADINGS
+   ========================================= */
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 40px);
+    margin-bottom: 10px;
+}
+
+.section-heading p:last-child {
+    color: #746b64;
+}
+
+
+/* =========================================
+   6. CAROUSEL
+   ========================================= */
+
+/* Each slide uses a background image */
+.carousel-background {
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Background images for the three slides */
+.slide-one {
+    background-image: url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1400');
+}
+
+.slide-two {
+    background-image: url('https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=1400');
+}
+
+.slide-three {
+    background-image: url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=1400');
+}
+
+/* Dark overlay improves text readability */
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(30, 15, 8, 0.75),
+        rgba(30, 15, 8, 0.15)
+    );
+}
+
+/* Text positioned over the slide background */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    bottom: auto;
+    transform: translateY(-50%);
+    text-align: left;
+    z-index: 2;
+}
+
+.carousel-caption p {
+    color: var(--caramel);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.carousel-caption h3 {
+    color: var(--white);
+    font-size: clamp(28px, 4vw, 46px);
+    margin-bottom: 20px;
+}
+
+/* Carousel indicators */
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   7. ABOUT SECTION
+   ========================================= */
+
+.about-section {
+    background-color: var(--white);
+}
+
+.about-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about-section h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.about-section p:not(.eyebrow) {
+    color: #746b64;
+}
+
+
+/* =========================================
+   8. PRODUCT CARDS
+   ========================================= */
+
+.products-section {
+    background-color: var(--cream);
+}
+
+/* Bootstrap card customised for the cookie brand */
+.product-card {
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--white);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Keep all product images the same height */
+.product-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.product-card .card-body {
+    padding: 24px;
+}
+
+.product-card .card-title {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.product-card .card-text {
+    color: #746b64;
+    font-size: 14px;
+}
+
+.product-price {
+    color: var(--chocolate);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   9. WHY CHOOSE US SECTION
+   ========================================= */
+
+.features-section {
+    background-color: var(--white);
+}
+
+.feature-item {
+    padding: 30px 20px;
+    height: 100%;
+    border: 1px solid #eee4d7;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.feature-item:hover {
+    border-color: var(--caramel);
+}
+
+.feature-item h5 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.feature-item p {
+    color: #746b64;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   10. CONTACT SECTION
+   ========================================= */
+
+.contact-section {
+    background-color: var(--chocolate);
+    color: var(--white);
+}
+
+.contact-section h2 {
+    color: var(--white);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    color: #f0e4d8;
+}
+
+.contact-section .eyebrow {
+    color: var(--caramel);
+}
+
+.contact-section .btn-light {
+    color: var(--dark-chocolate);
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 13px 25px;
+}
+
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+
+.footer {
+    background-color: var(--dark-chocolate);
+    color: #d9c9ba;
+    padding: 30px 0;
+    font-size: 13px;
+}
+
+.footer-brand {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.footer-brand:hover {
+    color: var(--caramel);
+}
+
+
+/* =========================================
+   12. RESPONSIVE DESIGN
+   ========================================= */
+
+/* Adjust layout for tablets and smaller screens */
+@media (max-width: 991px) {
+
+    .hero-section {
+        padding: 70px 0;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+/* Adjust layout for mobile phones */
+@media (max-width: 576px) {
+
+    section {
+        padding: 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        height: 280px;
+    }
+
+    .carousel-background {
+        height: 320px;
+    }
+
+    .carousel-caption {
+        left: 8%;
+        right: 8%;
+    }
+
+    .carousel-caption h3 {
+        font-size: 28px;
+    }
+
+    .about-image {
+        height: 280px;
+    }
+
+    .contact-section h2 {
+        font-size: 30px;
+    }
+}
